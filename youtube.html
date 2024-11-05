@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Summarizer Project</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f3f7fa;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        .header {
+            text-align: center;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #3c91e6, #5c9aff);
+            color: white;
+            animation: fade-in 1.5s ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            color: #f1f1f1;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            max-width: 800px;
+            margin: 2.5rem auto;
+            padding: 1.5rem 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #3c91e6;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3c91e6;
+            padding-left: 8px;
+            text-shadow: 1px 1px 4px rgba(60, 145, 230, 0.2);
+        }
+
+        section p,
+        section ul {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        section ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        section ul li {
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        section ul li:hover {
+            color: #3c91e6;
+            cursor: pointer;
+        }
+
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2.5rem;
+        }
+
+        .footer a {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff3b3b;
+        }
+
+        /* Button Styling */
+        .download-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .download-button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            color: white;
+            background-color: #3c91e6;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .download-button:hover {
+            background-color: #2d71c2;
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>YouTube Summarizer</h1>
+        <p>Summarizing YouTube Videos with AI</p>
+    </header>
+
+    <section class="project-overview">
+        <h2>Project Overview</h2>
+        <p>
+            The YouTube Summarizer project aims to utilize AI techniques to provide concise summaries of YouTube videos.
+            By extracting key points from the video transcripts, users can quickly grasp the essential content without
+            watching the entire video. This tool is particularly useful for educational videos, tutorials, and long-form
+            content.
+        </p>
+    </section>
+
+    <section class="project-objectives">
+        <h2>Objectives</h2>
+        <ul>
+            <li>Implement a script to fetch video transcripts using the YouTube API.</li>
+            <li>Utilize natural language processing (NLP) techniques to summarize the transcripts.</li>
+            <li>Provide a user-friendly interface in Google Colab for easy interaction.</li>
+            <li>Enhance the summarization model over time using user feedback.</li>
+        </ul>
+    </section>
+
+    <section class="benefits">
+        <h2>Benefits of the YouTube Summarizer</h2>
+        <p>The YouTube Summarizer offers several advantages:</p>
+        <ul>
+            <li><strong>Time-Saving:</strong> Quickly understand video content without watching it fully.</li>
+            <li><strong>Increased Productivity:</strong> Focus on essential information and skip unnecessary details.
+            </li>
+            <li><strong>Accessibility:</strong> Makes content easier to digest for individuals with time constraints.
+            </li>
+            <li><strong>Educational Tool:</strong> Helps students and learners get quick insights from educational
+                videos.</li>
+        </ul>
+    </section>
+
+    <section class="technology-stack">
+        <h2>Technology Stack</h2>
+        <ul>
+            <li><strong>Programming Language:</strong> Python</li>
+            <li><strong>Libraries:</strong> Transformers, NLTK, YouTube API</li>
+            <li><strong>Platform:</strong> Google Colab for hosting and executing code</li>
+            <li><strong>Machine Learning:</strong> Fine-tuned models for summarization tasks</li>
+        </ul>
+    </section>
+
+    <!-- Download Button Section -->
+    <section class="download-section">
+        <a href="path/to/youtube_summarizer_project_code.zip" download="YouTubeSummarizerProjectCode.zip">
+            <button class="download-button">Download Project Code</button>
+        </a>
+    </section>
+
+    <footer class="footer">
+        <p>For more information, contact us at <a href="mailto:prajwalpawshe63@gmail.com">info@youtubesummarizer.com</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
